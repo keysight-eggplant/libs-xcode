@@ -317,8 +317,8 @@
       NSString *configString = [context objectForKey: @"CONFIG_STRING"]; 
       NSString *buildTemplate = @"%@ %@ -c %@ %@ %@ -o %@";
       NSDebugLog(@"*** %@ %@", path, buildPath);
-      NSString *compilePath = ([[[self buildPath] pathComponents] count] > 1)?
-        [[self buildPath] stringByEscapingSpecialCharacters]:[self buildPath];
+      NSString *compilePath = ([[buildPath pathComponents] count] > 1)?
+        [buildPath stringByEscapingSpecialCharacters]:buildPath;
       NSString *buildCommand = [NSString stringWithFormat: buildTemplate, 
 					 compiler,
 					 compilePath,
