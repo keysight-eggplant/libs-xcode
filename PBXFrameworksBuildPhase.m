@@ -266,6 +266,7 @@
   int result = 0;
   if([modified isEqualToString: @"YES"])
     {
+      NSDebugLog(@"%@", command);
       result = system([command cString]);
     }
   else
