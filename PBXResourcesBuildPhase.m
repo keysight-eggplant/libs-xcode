@@ -164,8 +164,11 @@ extern char **environ;
     }
 
   // Handle Info.plist....
-  NSString *inputPlist = [[NSString stringWithCString:
-                                      getenv("INFOPLIST_FILE")] lastPathComponent];
+  NSString *inputPlist = [NSString stringWithCString: getenv("INFOPLIST_FILE")];
+  if (![[NSFileManager defaultManager] fileExistsAtPath:inputPlist]) {
+    inputPlist = [inputPlist lastPathComponent];
+  }
+  
   NSString *outputPlist = [resourcesDir
                             stringByAppendingPathComponent: @"Info-gnustep.plist"];
   [self processInfoPlistInput: inputPlist
