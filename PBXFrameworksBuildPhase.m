@@ -194,7 +194,7 @@
         }
       else
         {
-          //linkString = [linkString stringByAppendingString:];
+          linkString = [linkString stringByAppendingString:[NSString stringWithFormat:@"%@ ", file]];
         }
     }
 
