@@ -1,3 +1,8 @@
+########## Keysight Technologies Added Changes To Satisfy LGPL 2.x Section 2(a) Requirements ##########
+# Committed by: Adam Fox
+# Commit ID: bd9e2c946b74375f6d1f13f7586571b00cdde22a
+# Date: 2020-10-26 00:57:18 -0600
+########## End of Keysight Technologies Notice ##########
 #import "PBXCommon.h"
 #import "PBXResourcesBuildPhase.h"
 #import "PBXFileReference.h"
